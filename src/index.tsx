@@ -1,11 +1,18 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { View, StatusBar } from 'react-native';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import Routes from './routes';
+
+const App: React.FC = () => (
+  <View style={{ flex: 1 }}>
+    <StatusBar
+      barStyle="light-content"
+      backgroundColor="transparent"
+      translucent
+    />
+    <Routes />
+  </View>
 );
 
+export default App;
